@@ -1,0 +1,33 @@
+{
+    "name": "gitkv/laravel-gearman-rpc",
+    "type": "library",
+    "description": "Laravel/Lumen Gearman rpc. Based from https://github.com/mhlavac/gearman",
+    "keywords": ["php", "gearman", "job", "server", "workers", "supervisor", "Lumen", "Laravel", "rpc"],
+    "homepage": "https://github.com/gitkv/laravel-gearman-rpc#readme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikolay Volkov",
+            "email": "gitkv@ya.ru",
+            "homepage": "https://github.com/gitkv",
+            "role": "Creator"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/gitkv/laravel-gearman-rpc/issues",
+        "source": "https://github.com/gitkv/laravel-gearman-rpc"
+    },
+    "require": {
+        "php": ">=7.0",
+        "mhlavac/gearman": "~0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "gitkv\\GearmanRpc\\": "src",
+            "gitkv\\GearmanRpc\\Examples": "Examples"
+        }
+    },
+    "suggest": {
+        "ext-gearman": "PHP Gearman extension for running worker"
+    }
+}
