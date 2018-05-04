@@ -6,7 +6,7 @@ Laravel Gearman rpc
 Laraval / Lumen Gearman Remote Procedure Call
 
 Requires:
-* Laravel / Lumen >=5.5
+* Laravel / Lumen >=5.5/
 * PHP >= 7.1
 * Gearman PHP-extension
 
