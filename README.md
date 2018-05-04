@@ -1,9 +1,15 @@
 Laravel Gearman rpc
 ===================
 
+[![Build Status](https://travis-ci.org/gitkv/laravel-gearman-rpc.svg?branch=master)](https://travis-ci.org/gitkv/laravel-gearman-rpc)
+
 Laraval / Lumen Gearman Remote Procedure Call
 
-[![Build Status](https://travis-ci.org/gitkv/laravel-gearman-rpc.svg?branch=master)](https://travis-ci.org/gitkv/laravel-gearman-rpc)
+Requires:
+* Laravel / Lumen >=5.5
+* PHP >= 7.1
+* Gearman PHP-extension
+
 
 Installation
 ------------
