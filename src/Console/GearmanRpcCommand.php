@@ -28,7 +28,7 @@ class GearmanRpcCommand extends \Illuminate\Console\Command {
      * Request user supervisor config set.
      */
     public function handle() {
-        $this->worker = new Worker();
+        $this->worker = new Worker(config('gearman-rpc.host', '127.0.0.1'), config('gearman-rpc.port', '4730'));
         foreach (config('gearman-rpc.handlers') as $handlerName => $handler) {
             $this->worker->addFunction($handlerName, $handler);
         }

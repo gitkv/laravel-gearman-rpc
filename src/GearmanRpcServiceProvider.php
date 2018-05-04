@@ -28,7 +28,11 @@ class GearmanRpcServiceProvider extends ServiceProvider {
         $this->commands('command.gearman-rpc');
 
         $this->app->singleton('gearman-rpc', function () {
-            return new Client();
+            return new Client(
+                config('gearman-rpc.host', '127.0.0.1'),
+                config('gearman-rpc.port', '4730'),
+                config('gearman-rpc.timeout', 1000)
+            );
         });
 
         $this->app->alias('gearman-rpc', Client::class);

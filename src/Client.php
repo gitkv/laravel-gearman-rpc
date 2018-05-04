@@ -5,10 +5,10 @@ namespace gitkv\GearmanRpc;
 
 class Client extends \MHlavac\Gearman\Client {
 
-    public function __construct() {
-        parent::__construct(config('gearman-rpc.timeout', 1000));
+    public function __construct($host = '127.0.0.1', $port = '4730', $timeout = 1000) {
+        parent::__construct($timeout);
 
-        $this->addServer(config('gearman-rpc.host', '127.0.0.1'), config('gearman-rpc.port', '4730'));
+        $this->addServer($host, $port);
     }
 
 }
