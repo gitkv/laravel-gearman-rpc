@@ -13,5 +13,4 @@ class ExampleRpcHandler implements HandlerContract {
             'payload' => $payload,
         ];
     }
-
 }

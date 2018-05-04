@@ -20,12 +20,14 @@ final class ClientTest extends TestCase {
         $client = new Client();
         $client->addServer();
 
-        echo $client->doNormal('replace', 'java is best programming language!');
-        echo $client->doLow('replace', 'java is best programming language!');
-        echo $client->doHigh('replace', 'java is best programming language!');
+        $testData = ['test' => 'data'];
 
-        $client->doBackground('long_task', 'java java java java');
-        $client->doHighBackground('long_task', 'java java java java');
-        $client->doLowBackground('long_task', 'java java java java');
+        echo $client->doNormal('TestFunction', $testData);
+        echo $client->doLow('TestFunction', $testData);
+        echo $client->doHigh('TestFunction', $testData);
+
+        $client->doBackground('TestFunction', $testData);
+        $client->doHighBackground('TestFunction', $testData);
+        $client->doLowBackground('TestFunction', $testData);
     }
 }

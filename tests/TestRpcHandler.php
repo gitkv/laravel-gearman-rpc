@@ -13,5 +13,4 @@ class TestRpcHandler implements HandlerContract {
             'payload' => $payload,
         ];
     }
-
 }
