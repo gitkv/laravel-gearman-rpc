@@ -8,6 +8,8 @@
 *.njsproj
 *.sln
 
+/logs/*
+!/logs
 /vendor
 /build
 Homestead.json

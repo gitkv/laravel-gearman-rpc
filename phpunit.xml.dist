@@ -12,6 +12,12 @@
          bootstrap="tests/bootstrap.php"
 >
 
+    <logging>
+        <log type="coverage-clover" target="./logs/clover.xml" charset="UTF-8"
+             yui="true" highlight="true"
+             lowUpperBound="50" highLowerBound="80"/>
+    </logging>
+
     <testsuites>
         <testsuite name="Test suite">
             <directory>./tests</directory>
