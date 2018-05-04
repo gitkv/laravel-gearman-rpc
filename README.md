@@ -3,6 +3,8 @@ Laravel Gearman rpc
 
 Laraval / Lumen Gearman Remote Procedure Call
 
+[![Build Status](https://travis-ci.org/gitkv/laravel-gearman-rpc.svg?branch=master)](https://travis-ci.org/gitkv/laravel-gearman-rpc)
+
 Installation
 ------------
 * Run:
