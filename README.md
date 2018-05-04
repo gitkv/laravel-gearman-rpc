@@ -8,7 +8,8 @@ Laraval / Lumen Gearman Remote Procedure Call
 Requires:
 * Laravel / Lumen >=5.5
 * PHP >= 7.1
-* Gearman PHP-extension
+* Gearman PHP extension
+* Socket PHP extension
 
 
 Installation
@@ -32,7 +33,7 @@ Add service provider to /config/app.php:
     gitkv\GearmanRpc\GearmanRpcServiceProvider::class
 ],
 'aliases' => [
-    'GearmanRpc' => gitkv\GearmanRpc\GearmanRpcFacade::class,
+    'GearmanRpc' => gitkv\GearmanRpc\Facade\GearmanRpc::class,
 ],
 ```
 

@@ -10,20 +10,17 @@ class Worker extends \MHlavac\Gearman\Worker {
         $this->addServer($host, $port);
     }
 
-    public function getClosure($callback) {
-        return function () use ($callback) {
-            $class = new $callback;
+    public function getClosure(string $callback) {
+        $class = new $callback;
+        if ($class instanceof HandlerContract === false)
+            throw new \Exception('Callback is not instance of ' . HandlerContract::class);
 
-            return $class->handle();
+        return function ($arg) use ($class) {
+            return $class->handle($arg);
         };
     }
 
     public function addFunction($functionName, $callback, $timeout = null) {
-        if ($callback instanceof HandlerContract)
-            throw new \Exception('Callback is not instance of '.HandlerContract::class);
-        $closure = $this->getClosure($callback);
-        parent::addFunction($functionName, $closure, $timeout);
-
-        return $this;
+        return parent::addFunction($functionName, $this->getClosure($callback), $timeout);
     }
 }

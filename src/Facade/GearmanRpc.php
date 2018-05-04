@@ -1,11 +1,11 @@
 <?php
 
-namespace gitkv\GearmanRpc;
+namespace gitkv\GearmanRpc\Facade;
 
 
 use Illuminate\Support\Facades\Facade;
 
-class GearmanRpcFacade extends Facade {
+class GearmanRpc extends Facade {
 
     /**
      * Get the registered name of the component.

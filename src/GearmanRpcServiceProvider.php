@@ -9,7 +9,8 @@ use Illuminate\Support\ServiceProvider;
 class GearmanRpcServiceProvider extends ServiceProvider {
 
     public function boot() {
-        $this->publishes([__DIR__ . '/../config/' => config_path() . '/']);
+        //todo for Laravel:
+        //$this->publishes([__DIR__ . '/../config/' => config_path() . '/']);
     }
 
 

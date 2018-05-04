@@ -11,4 +11,11 @@ class Client extends \MHlavac\Gearman\Client {
         $this->addServer($host, $port);
     }
 
+    public function doNormal($functionName, $workload, $unique = null) {
+        if (is_array($workload) || is_object($workload))
+            $workload = json_encode($workload);
+
+        return parent::doNormal($functionName, $workload, $unique);
+    }
+
 }
