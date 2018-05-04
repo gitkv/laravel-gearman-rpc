@@ -29,5 +29,8 @@
     },
     "suggest": {
         "ext-gearman": "PHP Gearman extension for running worker"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "optimize-autoloader": true
 }
