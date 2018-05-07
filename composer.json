@@ -24,7 +24,8 @@
     "autoload": {
         "psr-4": {
             "gitkv\\GearmanRpc\\": "src",
-            "gitkv\\GearmanRpc\\Examples\\": "Examples"
+            "gitkv\\GearmanRpc\\Examples\\": "Examples",
+            "gitkv\\GearmanRpc\\tests\\": "tests"
         }
     },
     "suggest": {
