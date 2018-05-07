@@ -21,7 +21,7 @@ class GearmanRpcServiceProvider extends ServiceProvider {
             'gearman-rpc'
         );
 
-        $this->app->configure('image');
+        $this->app->configure('gearman-rpc');
 
         $this->app->singleton('command.gearman-rpc', function () {
             return new GearmanRpcCommand();

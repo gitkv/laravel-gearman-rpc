@@ -10,13 +10,25 @@ class Worker extends \MHlavac\Gearman\Worker {
         $this->addServer($host, $port);
     }
 
+    protected function isImplementHandle($class) {
+        $interfaceList = class_implements($class);
+        if ($interfaceList)
+            foreach ($interfaceList as $interface) {
+                if ($interface === HandlerContract::class)
+                    return true;
+            }
+
+        return false;
+    }
+
     public function getClosure(string $callback) {
-        $class = new $callback;
-        if ($class instanceof HandlerContract === false)
+        if (!$this->isImplementHandle($callback))
             throw new \Exception('Callback is not instance of ' . HandlerContract::class);
 
-        return function ($arg) use ($class) {
-            return $class->handle($arg);
+        return function ($arg) use ($callback) {
+            $class = new $callback;
+
+            return json_encode($class->handle($arg));
         };
     }
 
